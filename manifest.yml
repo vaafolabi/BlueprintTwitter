@@ -1,0 +1,19 @@
+applications:
+- path: .
+  memory: 1024M
+  instances: 1
+  domain: mybluemix.net
+  name: BlueprintTwitter
+  host: BluePrintTwitter
+  disk_quota: 1024M
+  services:
+  - BlueprintConversation
+  - BlueprintPersonalityInsights
+  - BluePrintIoTForInsurance
+  - BluePrintTwitterInsights
+  - BluePrintTwitter-cloudantNoSQLDB
+  - BluePrintTradeoffAnalytics
+  - BlueprintMongo
+  env:
+    NODE_ENV: production
+  command: npm start
